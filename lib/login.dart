@@ -13,7 +13,7 @@ class LoginScreenState extends State<LoginScreen> {
         body: Column(
           children: [
             TextField(
-              decoration: InputDecoration(hintText: "blah blah"),
+              decoration: InputDecoration(hintText: "hello world"),
             ),
             TextField(),
             Row(children: [
