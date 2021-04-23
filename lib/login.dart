@@ -19,11 +19,33 @@ class LoginScreenState extends State<LoginScreen> {
             Row(children: [
               MaterialButton(
                   child: Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage(
-                              'https://www.thesprucecrafts.com/thmb/emhQOmE6hEucSHOqoAXeDmqWTMk=/6805x0/filters:no_upscale():max_bytes(150000):strip_icc()/fish-clipart-kcMbe6x5i-5b1ed094a474be0038540369.png'),
-                          fit: BoxFit.cover),
+                    child: SizedBox.fromSize(
+                      size: Size(180, 180), // button width and height
+                      child: ClipOval(
+                        child: Material(
+                          color: Color.fromRGBO(0, 160, 227, 1), // button color
+                          child: InkWell(
+                            splashColor: Color.fromRGBO(248, 177, 1, 1),
+                            // splash color
+                            onTap: () {},
+                            // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image(image: AssetImage("assets/images/button_image.png")
+                                ),
+                                Text(
+                                  "Call",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                  ),
+                                ), // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                   onPressed: () {})
